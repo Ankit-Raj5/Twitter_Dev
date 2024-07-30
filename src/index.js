@@ -11,8 +11,15 @@ app.listen(3000, async () =>{
     console.log('Server is running');
     await connect();
     console.log('MongoDB connected');
+
+    const tweets = await Tweet.find({
+        content:  ['First tweet', 'my tweet', '123d5f']
+    });
+
+    console.log(tweets);
     
-    // create tweet
+ 
+// {create tweet
     // const tweet = await Tweet.create({
     //     content: 'Second tweet'
     // });
@@ -21,8 +28,8 @@ app.listen(3000, async () =>{
     //find tweets
     // const tweets = await Tweet.find();
 
-    const tweetRepo = new TweetRepository();
-    const tweet = await tweetRepo.create({content: 'tweet with hooks'});
+    // const tweetRepo = new TweetRepository();
+    // const tweet = await tweetRepo.create({content: 'tweet with hooks'});
     // const comment = await Comment.create({content: 'new Comment!'});
     // tweet.comments.push(comment);
 
@@ -32,6 +39,6 @@ app.listen(3000, async () =>{
      
 
     // const tweet = await tweetRepo.getAll(0, 4);
-    // console.log(tweet[0].contentWithEmail);
-
+    // console.log(tweet[0].contentWithEmail);}
 });
+
