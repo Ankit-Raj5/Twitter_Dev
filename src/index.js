@@ -22,7 +22,7 @@ app.listen(3000, async () =>{
     // const tweets = await Tweet.find();
 
     const tweetRepo = new TweetRepository();
-    // const tweet = await tweetRepo.create({content: 'my tweet with comment SCHEMA'});
+    const tweet = await tweetRepo.create({content: 'tweet with hooks'});
     // const comment = await Comment.create({content: 'new Comment!'});
     // tweet.comments.push(comment);
 
@@ -31,6 +31,7 @@ app.listen(3000, async () =>{
     // await tweet.save();
      
 
-    const tweet = await tweetRepo.getAll(0, 4);
-    console.log(tweet[0].contentWithEmail);
+    // const tweet = await tweetRepo.getAll(0, 4);
+    // console.log(tweet[0].contentWithEmail);
+
 });
