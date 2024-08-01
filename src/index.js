@@ -11,8 +11,8 @@ app.listen(3000, async () =>{
     await connect();
     console.log('MongoDB connected');
 
-    // let ser = new service();
-    // await ser.create({content: 'Done with #cool'})
+    let ser = new service();
+    await ser.create({content: 'Done with #coolERRRRR #DAShing #cute'})
 });
 
  
