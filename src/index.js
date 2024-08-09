@@ -34,12 +34,6 @@ app.listen(3000, async () =>{
     //     name: 'Admin'
     // });
     
-    // const likeservice = new LikeService();   
-    // await likeservice.toggleLike(
-    //     tweets[0].id,
-    //     'Tweet',
-    //     users[0].id
-    // );
 });
 
  
