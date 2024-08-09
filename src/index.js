@@ -20,11 +20,11 @@ app.listen(3000, async () =>{
     await connect();
     console.log('MongoDB connected'); 
 
-    const userRepo = new UserRepository();
-    const tweetRepo = new TweetRepository();
+    // const userRepo = new UserRepository();
+    // const tweetRepo = new TweetRepository();
 
-    const tweets = await tweetRepo.getAll(0,10);
-    const users = await userRepo.getAll();
+    // const tweets = await tweetRepo.getAll(0,10);
+    // const users = await userRepo.getAll();
 
 
     //creating user
@@ -34,12 +34,12 @@ app.listen(3000, async () =>{
     //     name: 'Admin'
     // });
     
-    const likeservice = new LikeService();   
-    await likeservice.toggleLike(
-        tweets[0].id,
-        'Tweet',
-        users[0].id
-    );
+    // const likeservice = new LikeService();   
+    // await likeservice.toggleLike(
+    //     tweets[0].id,
+    //     'Tweet',
+    //     users[0].id
+    // );
 });
 
  
