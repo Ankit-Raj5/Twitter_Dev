@@ -24,3 +24,24 @@ export const signup =async (req, res)=>{
         });
     }
 }
+
+export const login = async (req, res) =>{
+    
+    try {
+        const token = await userService.signin(req.body);
+        return res.status(200).json({
+            message: 'Successfully logged in',
+            success: true,
+            data: token,
+            err: {}
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(401).json({
+            message: "Something went wrong at auth controller",
+            success: false,
+            data: {},
+            err: error
+        });
+    }
+}
