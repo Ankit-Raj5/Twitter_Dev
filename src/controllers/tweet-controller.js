@@ -1,6 +1,6 @@
 import TweetService from "../services/tweet-service.js";
 import upload from "../config/file-upload-s3-config.js";
-const singleuploader = upload.single('image');
+const singleuploader = upload.array('image', 10);
 
 
 const tweetService = new TweetService();
@@ -12,7 +12,7 @@ export const createTweet = async (req, res)=>{
             if (err) {
                 return res.status(500).json({ error: err });
             }
-            console.log('Image url is :', req.file);
+            console.log('Image url is :', req.files);
 
             const payload = req.body;
             payload.image = req.file.location;
